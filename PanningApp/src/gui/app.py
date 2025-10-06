@@ -5,7 +5,7 @@ import soundfile as sf
 import sounddevice as sd
 from tkinter import Tk, Frame, Scale, HORIZONTAL, StringVar, OptionMenu, Button, Entry, Label
 from components.play_button import PlayButton
-from audio.vbap import calculate_gains
+from audio.vbap2d import calculate_gains
 
 from gui.plot import plot_audio_channels, plot_speaker_and_source_positions
 
