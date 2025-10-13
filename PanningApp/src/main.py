@@ -48,7 +48,7 @@ sys.path.append(os.path.join(os.path.dirname(__file__), 'gui'))
 from gui.app import AudioPanningApp
 
 # Center the window on the screen
-def center_window(root, width=800, height=600):
+def center_window(root, width=1600, height=1200):
     screen_width = root.winfo_screenwidth()
     screen_height = root.winfo_screenheight()
     position_top = int(screen_height / 2 - height / 2)
