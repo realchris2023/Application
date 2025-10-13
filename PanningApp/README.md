@@ -31,12 +31,18 @@ audio-panning-gui
    cd audio-panning-gui
    ```
 
-2. Install the required dependencies:
+2. Create/refresh the virtual environment (Python 3.13 recommended):
    ```
-   pip install -r requirements.txt
+   python3 -m venv venv
    ```
 
-3. Run the application:
+3. Install the required dependencies **inside the virtual environment**:
+   ```
+   ./venv/bin/python -m pip install --upgrade pip
+   ./venv/bin/python -m pip install -r requirements.txt
+   ```
+
+4. Run the application (activation optional – the launcher will re-exec inside the venv if needed):
    ```
    python src/main.py
    ```

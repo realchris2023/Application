@@ -1,5 +1,7 @@
 import numpy as np
 
+sqrt3 = np.sqrt(3)
+
 def normalize(x):
     """Normalizes a vector x to its unit vector (length 1)."""
     return x / np.linalg.norm(x)
@@ -22,9 +24,8 @@ def calculate_gains(c1, c2, c3, v):
         g = normalize(g)  # Calculate the magnitude of the gain vector g=[g1,g2,g3],  sqrt((g1^2) + (g2^2) + (g3^2))
         return g
     
-    #Unsure about 0.707, 0.707, 0.707 as default gains for 3D - should it be sqrt(3)/3 = 0.577?
     except np.linalg.LinAlgError:
-        return np.array([0.707, 0.707, 0.707])  # Return default gains if the matrix is singular - (sqrrt(2))/2
+        return np.array([sqrt3/3, sqrt3/3, sqrt3/3])  # Return default gains if the matrix is singular - (sqrrt(2))/2
     
     
 
